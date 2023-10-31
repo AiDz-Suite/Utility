@@ -1,0 +1,17 @@
+BrickPlanet utilizes many techniques to protect scripts from accessing unsupervised .NET functionality.
+To start, they don't allow you to run "getmetatable" or "setmetatable".
+
+NLua helps protect by not retrieving objects marked "private" or "internal".
+If the object is marked public, you are free to grab it.
+
+Brickplanet marks most objects private to prevent you from even retrieving it but in a couple instances they do allow you to get the real Brickplanet.Scripting object.
+Their API layer Brickplanet.Scripting.Api is the safest place to operate scripts, due to it having all monitored functions and API calls.
+
+If the user were to retrieve a Brickplanet.Scripting object through one of the API leaks, by retieving a public member which goes back to Brickplanet.Scripting their second protection comes in.
+
+They have a function called NLua.MetaFunctions.ValidateObjectInternal. This functions checks your argument to make sure it's a valid object, and makes sure it's within the Brickplanet.Scripting.Api namespace.
+If this object somehow is not from Brickplanet.Scripting.Api then it throws the error message "trying to index an object outside of the Brickplanet scripting api" and doesn't give the user the method/property/object they wanted.
+
+This serves as a sort of "firewall" which is extremely challenging to bypass as it monitors all the objects your script tries to access. Without third party patching, trying to escape this sandbox is challenging.
+
+For exploit scripts, disabling this firewall grants the full .NET API, granted you can retrieve yourself a Brickplanet.Scripting object (or other).

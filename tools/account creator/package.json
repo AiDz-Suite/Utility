@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "axios": "^1.5.1",
+    "jsdom": "^22.1.0",
+    "mocha": "^10.2.0",
+    "selenium-webdriver": "^4.14.0",
+    "undetected-chrome-drive": "^1.2.2"
+  }
+}

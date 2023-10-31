@@ -1,0 +1,17 @@
+local data = Workspace:GetChildren(true)
+
+math.randomseed(os.time())
+
+function get_random(max)
+	return math.floor(math.random() * max * 2) % max
+end
+
+while true do
+	wait(get_random(3))
+	for _, v in pairs(data) do
+		if v:IsA("Part") then
+			local new_col = PartColor.New(get_random(255), get_random(255), get_random(255), 255)
+			v.Color = new_col
+		end
+	end
+end

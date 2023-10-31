@@ -1,0 +1,8 @@
+local mouse = Players.LocalPlayer.Mouse
+mouse.LeftButtonDown:Connect(function()
+     pcall(function()
+          if mouse.Target then
+               mouse.Target:Destroy()
+          end
+     end)
+end)

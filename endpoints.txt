@@ -1,0 +1,10 @@
+https://brickplanet.com/game-api/client/get-client-version/win
+https://www.brickplanet.com/game-api/client/get-client-version/win
+https://www.brickplanet.com/cdn/game-releases/8fZsu9BgTfKoacNsry1N9LHWsZBGntwH06Ma.zip
+https://www.brickplanet.com/game-api/workshop/get-player-accessories/USERNAME
+https://www.brickplanet.com/game-api/client/get-user-game-info-by-username/USERNAME
+https://www.brickplanet.com/game-api/client/get-game-asset-by-id/ASSETID
+https://www.brickplanet.com/game-api/client/check-auth/TOKEN
+https://www.brickplanet.com/game-api/workshop/get-model/MODELID
+https://www.brickplanet.com/game-api/workshop/get-game/
+https://www.brickplanet.com/game-api/workshop/retrieve-place/
