@@ -5,4 +5,4 @@ A collection of scripts I have created for the Script Executor.
 A collection of notes on the internals of BrickPlanet.
 
 # Tools
-Tools for automating tasks on BrickPlanet.
+Tools for automating specific tasks on BrickPlanet.
